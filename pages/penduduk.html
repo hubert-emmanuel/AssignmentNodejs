@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penduduk</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darksalmon;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: mediumslateblue;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-nav li {
+            margin-left: 1em;
+        }
+
+        .navbar-nav li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-nav li a:hover {
+            background-color: #495057;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        section {
+            background-color: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 2em;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .btn {
+            background-color: mediumslateblue;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 0.5em;
+            transition: background-color 0.3s;
+        }
+
+        .btn.edit {
+            background-color: goldenrod;
+        }
+
+        .btn.delete {
+            background-color: maroon;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Informasi Data</div>
+        <ul class="navbar-nav">
+            <li><a href="?menu=kartukeluarga">Kartu Keluarga</a></li>
+            <li><a href="?menu=penduduk">Penduduk</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Data Penduduk</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Informasi Penduduk</h2>
+            <button class="btn">Tambah Data</button>
+            <table class="animated-table">
+                <thead>
+                    <tr>
+                        <th>Nama Lengkap</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Alamat</th>
+                        <th>Golongan Darah</th>
+                        <th>Nomor Kartu Keluarga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Agus Santoso</td>
+                        <td>01-01-1980</td>
+                        <td>Jl. Merdeka No. 10</td>
+                        <td>O</td>
+                        <td>1234567890</td>
+                        <td>
+                            <button class="btn edit">Edit</button>
+                            <button class="btn delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alex Junaedi</td>
+                        <td>03-05-2000</td>
+                        <td>Jl. Jendral Sudirman No. 05</td>
+                        <td>B</td>
+                        <td>987654321</td>
+                        <td>
+                            <button class="btn edit">Edit</button>
+                            <button class="btn delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
